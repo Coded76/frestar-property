@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+
+.container {
+  min-width: 1036px;
+  width: 100%;
+  padding: 0.2rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+
+.border-custom {
+  border-color: #00143F;
+  /* border-width: 2px; */
+}
