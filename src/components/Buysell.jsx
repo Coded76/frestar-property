@@ -58,7 +58,7 @@ const Buysell = () => {
           initial="hidden"
           animate="visible"
           variants={containerVariants}
-          className="h-[281px] px-[7%] flex w-full items-center justify-center"
+          className="lg:h-[281px] md:mt-0 mt-4 px-[7%] flex w-full items-center justify-center"
         >
           <div className="w-full grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8 lg:h-[118px]">
             {[
@@ -116,7 +116,7 @@ const Buysell = () => {
           className="flex flex-col items-center lg:gap-[70px] mb-[7%]"
         >
           <motion.p
-            className="md:text-[64px] text-[32px] font-bold text-[#00143F]"
+            className="md:text-[64px] mt-4 text-[32px] font-bold text-[#00143F]"
             whileHover={{ scale: 1.02 }}
           >
             WHY Frestar?

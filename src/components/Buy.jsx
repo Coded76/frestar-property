@@ -60,7 +60,7 @@ export default function Buy() {
   const prevSlide = () => setIndex((index - 1 + slides.length) % slides.length);
 
   return (
-    <div className="min-h-screen bg-[#FFFCEC] flex flex-col items-center justify-center px-4">
+    <div className="min-h-screen bg-[#FFFCEC] md:py-0 py-[10%] flex flex-col items-center justify-center px-4">
       <div className="flex space-x-6 mb-4">
         <span className="text-black font-bold border-b-2 border-black cursor-pointer">
           Buy
