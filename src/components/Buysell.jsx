@@ -61,7 +61,6 @@ const Buysell = () => {
           className="h-[281px] px-[7%] flex w-full items-center justify-center"
         >
           <div className="w-full grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8 lg:h-[118px]">
-            {/* Reusable item */}
             {[
               {
                 title: "Buy",
@@ -85,20 +84,22 @@ const Buysell = () => {
                 variants={itemVariants}
                 whileHover={{
                   backgroundColor: "#F8FAFF",
-                  transition: { duration: 0.2 },
                 }}
-                className="w-full border-b border-black group cursor-pointer"
+                className="group w-full border-b border-black hover:border-[#3978F2] cursor-pointer transition-colors duration-300"
               >
                 <div className="flex flex-row items-center justify-between">
-                  <p className="font-semibold md:text-[40px]">{item.title}</p>
+                  <p className="font-semibold md:text-[40px] group-hover:text-[#3978F2] transition-colors duration-300">
+                    {item.title}
+                  </p>
                   <motion.div
                     whileHover={{ rotate: 180 }}
                     transition={{ duration: 0.3 }}
+                    className="transition-colors duration-300 group-hover:text-[#3978F2]"
                   >
                     <GoArrowDown className="font-bold text-3xl" />
                   </motion.div>
                 </div>
-                <p className="md:text-[24px] text-[16px] font-bold opacity-0 max-h-0 overflow-hidden transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:max-h-40">
+                <p className="md:text-[22px] my-2.5 text-[16px] font-bold opacity-0 max-h-0 overflow-hidden transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:max-h-40">
                   {item.desc}
                 </p>
               </motion.div>

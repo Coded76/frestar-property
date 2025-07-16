@@ -90,7 +90,6 @@ const Footer = () => {
           </div>
           <div className="flex md:flex-row flex-col items-center md:justify-between my-6 border-t-[2px] border-white">
             <div className="flex flex-col gap-[20px] pt-2.5">
-              {/* <Image src="/footerlogo.svg" width={220} height={40} /> */}
               <p className="text-[#9E9FA4] lg:w-[496px]">
                 Copyright © 2025, Frestar Inc
               </p>

@@ -89,26 +89,40 @@ const Hero = () => {
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
+          whileHover="hover"
           transition={{ delay: 0.5, duration: 0.8 }}
           className="bg-[#3978F2] lg:w-[695px] md:w-[500px] w-[355px] md:h-[351px] h-[300px] rounded-[8px] absolute md:left-[7%] left-[4%] gap-[37px] top-[20rem] flex flex-col items-start justify-center p-14"
+          variants={{
+            initial: {},
+            hover: {},
+          }}
         >
           <motion.p
             className="md:text-[55px] text-[22px] text-white font-bold leading-tight"
-            whileHover={{ x: 5 }}
+            // variants={{
+            //   hover: { color: "#000000" },
+            // }}
+            transition={{ duration: 0.3 }}
           >
             Build Your Future with Frestar Property
           </motion.p>
 
           <motion.div
             className="flex flex-row items-center gap-[31px] cursor-pointer"
-            whileHover={{ scale: 1.02 }}
+            variants={{ hover: { scale: 1.02 } }}
           >
             <motion.div
               className="md:w-[105px] w-[80px] h-[4px] bg-white"
-              whileHover={{ width: 120 }}
+              variants={{ hover: { backgroundColor: "#000000", width: 120 } }}
               transition={{ duration: 0.3 }}
             />
-            <p className="font-semibold text-white">Talk to an Agent</p>
+            <motion.p
+              className="font-semibold text-white"
+              variants={{ hover: { color: "#000000" } }}
+              transition={{ duration: 0.3 }}
+            >
+              Talk to an Agent
+            </motion.p>
           </motion.div>
         </motion.div>
       </div>
