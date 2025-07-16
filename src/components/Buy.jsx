@@ -18,23 +18,23 @@ const slides = [
   },
   {
     id: 2,
-    location: "MAITAMA, ABUJA DISTRICT 2",
-    title: "4 bedroom Penthouse",
-    price: "₦ 350,000,000",
+    location: "LUGBE, ABUJA DISTRICT 1",
+    title: "3 bedroom apartment",
+    price: "₦ 285,000,000",
     image: "/duplex.svg",
   },
   {
     id: 3,
-    location: "WUSE 2, ABUJA",
-    title: "Luxury Condo",
-    price: "₦ 175,000,000",
+    location: "LUGBE, ABUJA DISTRICT 1",
+    title: "5 bedroom Duplex Ter.",
+    price: "₦ 285,000,000",
     image: "/duplex.svg",
   },
   {
     id: 4,
-    location: "GARKI AREA 1",
-    title: "Modern Duplex",
-    price: "₦ 220,000,000",
+    location: "LUGBE, ABUJA DISTRICT 1",
+    title: "2 bedroom Apartment",
+    price: "₦ 800,000,000/YR",
     image: "/duplex.svg",
   },
   {
@@ -60,7 +60,7 @@ export default function Buy() {
   const prevSlide = () => setIndex((index - 1 + slides.length) % slides.length);
 
   return (
-    <div className="min-h-screen bg-[#FAF9F6] flex flex-col items-center justify-center px-4">
+    <div className="min-h-screen bg-[#FFFCEC] flex flex-col items-center justify-center px-4">
       <div className="flex space-x-6 mb-4">
         <span className="text-black font-bold border-b-2 border-black cursor-pointer">
           Buy
@@ -68,7 +68,6 @@ export default function Buy() {
         <span className="text-gray-400">Lease</span>
         <span className="text-gray-400">Shortlets</span>
       </div>
-
       <div className="relative w-full max-w-[1194px] mt-4 h-[500px] overflow-hidden rounded-xl">
         <AnimatePresence mode="wait">
           <motion.div
@@ -127,9 +126,16 @@ export default function Buy() {
         </button>
       </div>
 
-      <div className="flex items-center gap-[20px] mt-8 w-full max-w-5xl">
-        <div className="md:w-[100px] h-2 bg-blue-600 rounded-full" />
-        <span className="text-blue-600 font-medium">Explore</span>
+      <div className="flex items-center gap-5 py flex-col mt-8 w-full relative">
+        <div className="w-full h-[20px] bg-[#B6B6B621] absolute md:left-[10%] left-[5%] mb-4">
+          <div className="w-[10%] h-full bg-yellow-300"></div>
+        </div>
+        <div className="flex items-center gap-[20px] mt-8 w-full max-w-[75rem] group cursor-pointer transition-all duration-300 ease-in-out">
+          <div className="md:w-[100px] h-[4px] bg-blue-600 group-hover:bg-black transition-all duration-300" />
+          <span className="text-blue-600 font-bold md:text-[24px] group-hover:text-black transition-all duration-300">
+            Explore
+          </span>
+        </div>
       </div>
     </div>
   );
