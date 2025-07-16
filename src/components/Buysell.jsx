@@ -115,7 +115,7 @@ const Buysell = () => {
           className="flex flex-col items-center lg:gap-[70px] mb-[7%]"
         >
           <motion.p
-            className="text-[64px] font-bold text-[#00143F]"
+            className="md:text-[64px] text-[32px] font-bold text-[#00143F]"
             whileHover={{ scale: 1.02 }}
           >
             WHY Frestar?
@@ -130,7 +130,7 @@ const Buysell = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={cardHover}
-                className="w-[489px] p-[10%] justify-between flex flex-col hover:bg-white hover:border border-blue-400 h-[310px] bg-[#F2F6FF] group"
+                className="md:w-[489px] w-[300px] p-[10%] justify-between flex flex-col hover:bg-white hover:border border-blue-400 md:h-[310px] h-[200px] bg-[#F2F6FF] group"
               >
                 <div>
                   <p className="text-[#00143F] lg:text-[40px] font-bold">

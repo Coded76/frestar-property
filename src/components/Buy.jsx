@@ -62,7 +62,9 @@ export default function Buy() {
   return (
     <div className="min-h-screen bg-[#FAF9F6] flex flex-col items-center justify-center px-4">
       <div className="flex space-x-6 mb-4">
-        <span className="text-black font-bold border-b-2 border-black cursor-pointer">Buy</span>
+        <span className="text-black font-bold border-b-2 border-black cursor-pointer">
+          Buy
+        </span>
         <span className="text-gray-400">Lease</span>
         <span className="text-gray-400">Shortlets</span>
       </div>
@@ -85,14 +87,27 @@ export default function Buy() {
               className="rounded-xl"
               priority
             />
-            <div className="absolute top-3 right-3 bg-yellow-400 text-white px-4 py-2 font-bold">RENT</div>
-            <div className="absolute bottom-10 lg:left-40 left-10 bg-blue-600 text-white p-6 rounded-xl md:h-[256px]  md:w-[695px] w-[360px]">
-              <p className="text-[16px] text-gray-200">{slides[index].location}</p>
-              <h2 className="md:text-[55px] text-[20px] font-semibold">{slides[index].title}</h2>
-              <p className="md:text-[48px] text-[18px] font-bold text-black ">{slides[index].price}</p>
+            <div className="absolute top-3 right-3 bg-yellow-400 text-white px-4 py-2 font-bold">
+              RENT
+            </div>
+            <div className="absolute bottom-10 lg:left-40 left-7 bg-blue-600 text-white p-6 rounded-xl md:h-[256px]  md:w-[695px] w-[290px]">
+              <p className="text-[16px] text-gray-200">
+                {slides[index].location}
+              </p>
+              <h2 className="md:text-[55px] text-[20px] font-semibold">
+                {slides[index].title}
+              </h2>
+              <p className="md:text-[48px] text-[18px] font-bold text-black ">
+                {slides[index].price}
+              </p>
               <div className="flex flex-row items-center gap-[15px] ">
                 <div className="md:w-[105px] w-[40px] h-[4px] bg-white"></div>
-              <Link href="#" className="lg:text-[24px] text-[14px] font-light text-sm text-white">View Property</Link>
+                <Link
+                  href="#"
+                  className="lg:text-[24px] text-[14px] font-light text-sm text-white"
+                >
+                  View Property
+                </Link>
               </div>
             </div>
           </motion.div>
@@ -102,18 +117,18 @@ export default function Buy() {
           onClick={prevSlide}
           className="absolute left-2 top-1/2 -translate-y-1/2 bg-white px-3 py-2"
         >
-          <BsArrowLeft/>
+          <BsArrowLeft />
         </button>
         <button
           onClick={nextSlide}
           className="absolute right-2 top-1/2 -translate-y-1/2 bg-white px-3 py-2"
         >
-          <BsArrowRight/>
+          <BsArrowRight />
         </button>
       </div>
 
       <div className="flex items-center gap-[20px] mt-8 w-full max-w-5xl">
-        <div className="w-[100px] h-2 bg-blue-600 rounded-full" />
+        <div className="md:w-[100px] h-2 bg-blue-600 rounded-full" />
         <span className="text-blue-600 font-medium">Explore</span>
       </div>
     </div>

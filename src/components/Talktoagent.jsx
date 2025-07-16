@@ -10,9 +10,9 @@ const container = {
     opacity: 1,
     transition: {
       staggerChildren: 0.1,
-      delayChildren: 0.3
-    }
-  }
+      delayChildren: 0.3,
+    },
+  },
 };
 
 const item = {
@@ -21,18 +21,18 @@ const item = {
     opacity: 1,
     scale: 1,
     transition: {
-      duration: 0.5
-    }
-  }
+      duration: 0.5,
+    },
+  },
 };
 
 const hoverEffect = {
   scale: 1.05,
-  transition: { type: "spring", stiffness: 400, damping: 10 }
+  transition: { type: "spring", stiffness: 400, damping: 10 },
 };
 
 const tapEffect = {
-  scale: 0.95
+  scale: 0.95,
 };
 
 const boxes = [
@@ -53,24 +53,25 @@ const boxes = [
 
   { id: 13, row: 4, col: 1, color: "border-custom border-10" },
   { id: 14, row: 4, col: 2, color: "border-custom border-10" },
-  { 
-    id: 15, 
-    row: 4, 
-    col: 3, 
-    color: "bg-[#00143F] text-white flex items-center justify-center text-sm font-medium",
-    text: "Talk to an Agent" 
+  {
+    id: 15,
+    row: 4,
+    col: 3,
+    color:
+      "bg-[#00143F] text-white flex items-center justify-center text-sm font-medium",
+    text: "Talk to an Agent",
   },
   { id: 16, row: 4, col: 4, color: "border-custom border-10" },
 ];
 
 export default function ImageGrid() {
   return (
-    <motion.div 
+    <motion.div
       initial="hidden"
       animate="visible"
       className="min-h-screen bg-[#00143F] flex items-center justify-center px-4 py-10"
     >
-      <motion.div 
+      <motion.div
         variants={container}
         className="relative w-full max-w-6xl aspect-[4/3] overflow-hidden rounded"
       >
@@ -80,16 +81,11 @@ export default function ImageGrid() {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          <Image
-            src="/agent.svg"
-            alt="Agent"
-            fill
-            className="object-cover"
-          />
+          <Image src="/agent.svg" alt="Agent" fill className="object-cover" />
         </motion.div>
 
         {/* Animated grid overlay */}
-        <motion.div 
+        <motion.div
           variants={container}
           className="absolute inset-0 grid grid-cols-4 grid-rows-4 z-10"
         >
@@ -99,10 +95,12 @@ export default function ImageGrid() {
               variants={item}
               whileHover={hoverEffect}
               whileTap={tapEffect}
-              className={`border border-blue-900 ${box.color || "bg-transparent"}`}
+              className={`border border-blue-900 ${
+                box.color || "bg-transparent"
+              }`}
             >
               {box.text && (
-                <motion.div 
+                <motion.div
                   className="w-full h-full flex items-center justify-center"
                   whileHover={{ scale: 1.1 }}
                 >
